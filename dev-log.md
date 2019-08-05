@@ -10,9 +10,9 @@ mood
 ### Relationships
 
 has_one :dietary_restriction
-has_one :food
-has_one :drink
-has_one :dessert
+has_many :food
+has_many :drink
+has_many :dessert
 
 ##_DIETARY_RESTRICTION_
 ### Attributes
@@ -26,9 +26,9 @@ soy free
 ### Relationships
 
 belongs_to :user
-has_one :food, through: :user
-has_one :drink, through: user
-has_one :dessert, through: :user
+has_many :food, through: :user
+has_many :drink, through: user
+has_many :dessert, through: :user
 
 ##_FOOD_
 ### Attributes
