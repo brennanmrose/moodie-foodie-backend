@@ -7,6 +7,10 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
+  def show
+    render json: @user, status: 200
+  end
+
   # POST /users
   def create
     @user = User.new(user_params)
