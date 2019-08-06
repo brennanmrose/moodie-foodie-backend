@@ -14,18 +14,18 @@ ActiveRecord::Schema.define(version: 2019_08_06_021702) do
 
   create_table "desserts", force: :cascade do |t|
     t.string "name"
-    t.string "description"
-    t.string "user_id"
+    t.text "description"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "dietary_restrictions", force: :cascade do |t|
-    t.string "vegetarian"
-    t.string "vegan"
-    t.string "peanut_free"
-    t.string "gluten_free"
-    t.string "soy_free"
+    t.boolean "vegetarian"
+    t.boolean "vegan"
+    t.boolean "peanut_free"
+    t.boolean "gluten_free"
+    t.boolean "soy_free"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,16 +33,16 @@ ActiveRecord::Schema.define(version: 2019_08_06_021702) do
 
   create_table "drinks", force: :cascade do |t|
     t.string "name"
-    t.string "description"
-    t.string "user_id"
+    t.text "description"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
-    t.string "description"
-    t.string "user_id"
+    t.text "description"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
