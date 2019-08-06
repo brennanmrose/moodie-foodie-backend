@@ -1,4 +1,4 @@
-class MoodsController < ApplicationController
+class Api::V1::MoodsController < ApplicationController
   before_action :set_mood, only: [:show, :update, :destroy]
 
   # GET /moods
