@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vegetarian: MyString
+  vegan: MyString
+  peanut_free: MyString
+  gluten_free: MyString
+  soy_free: MyString
+
+two:
+  vegetarian: MyString
+  vegan: MyString
+  peanut_free: MyString
+  gluten_free: MyString
+  soy_free: MyString
