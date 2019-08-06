@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_015626) do
+ActiveRecord::Schema.define(version: 2019_08_06_021702) do
+
+  create_table "desserts", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "dietary_restrictions", force: :cascade do |t|
     t.string "vegetarian"
@@ -19,6 +27,22 @@ ActiveRecord::Schema.define(version: 2019_08_06_015626) do
     t.string "gluten_free"
     t.string "soy_free"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drinks", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "foods", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
