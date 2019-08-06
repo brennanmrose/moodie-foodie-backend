@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_05_225004) do
+ActiveRecord::Schema.define(version: 2019_08_06_015626) do
+
+  create_table "dietary_restrictions", force: :cascade do |t|
+    t.string "vegetarian"
+    t.string "vegan"
+    t.string "peanut_free"
+    t.string "gluten_free"
+    t.string "soy_free"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"

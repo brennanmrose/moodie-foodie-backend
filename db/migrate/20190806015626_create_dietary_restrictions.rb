@@ -6,6 +6,7 @@ class CreateDietaryRestrictions < ActiveRecord::Migration[5.2]
       t.string :peanut_free
       t.string :gluten_free
       t.string :soy_free
+      t.integer :user_id
 
       t.timestamps
     end
