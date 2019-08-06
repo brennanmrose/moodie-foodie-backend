@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :dietary_restrictions
 	namespace :api do
 		namespace :v1 do
 		  resources :users
+		  resources :dietary_restrictions
 		end
 	end
 
