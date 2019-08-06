@@ -1,7 +1,7 @@
 class Mood < ApplicationRecord
-	has_many :food
-	has_many :drink
-	has_many :dessert
+	has_many :foods
+	has_many :drinks
+	has_many :desserts
 	
 	validates :name, presence: true
 end
