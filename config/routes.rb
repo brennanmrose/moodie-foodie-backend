@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :desserts
-  resources :drinks
-  resources :foods
 	namespace :api do
 		namespace :v1 do
-		  resources :users
-		  resources :dietary_restrictions
+		  resources :desserts
+		  resources :drinks
+		  resources :foods
 		end
 	end
 
