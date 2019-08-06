@@ -1,10 +1,9 @@
 class Api::V1::DessertsController < ApplicationController
-  before_action :set_dessert, only: [:show, :update, :destroy]
+  before_action :set_dessert, :set_mood, only: [:show, :update, :destroy]
 
   # GET /desserts
   def index
-    @desserts = Dessert.all
-
+    @desserts = @mood.desserts
     render json: @desserts
   end
 
@@ -42,6 +41,10 @@ class Api::V1::DessertsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_dessert
       @dessert = Dessert.find(params[:id])
+    end
+
+    def set_mood
+      @mood = Mood.find(params[:mood_id])
     end
 
     # Only allow a trusted parameter "white list" through.

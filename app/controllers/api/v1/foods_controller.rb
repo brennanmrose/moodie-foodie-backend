@@ -1,10 +1,9 @@
 class Api::V1::FoodsController < ApplicationController
-  before_action :set_food, only: [:show, :update, :destroy]
+  before_action :set_food, :set_mood, only: [:show, :update, :destroy]
 
   # GET /foods
   def index
-    @foods = Food.all
-
+    @foods = @mood.foods
     render json: @foods
   end
 
@@ -42,6 +41,10 @@ class Api::V1::FoodsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_food
       @food = Food.find(params[:id])
+    end
+
+    def set_mood
+      @mood = Mood.find(params[:mood_id])
     end
 
     # Only allow a trusted parameter "white list" through.

@@ -1,10 +1,9 @@
 class Api::V1::DrinksController < ApplicationController
-  before_action :set_drink, only: [:show, :update, :destroy]
+  before_action :set_drink, :set_mood, only: [:show, :update, :destroy]
 
   # GET /drinks
   def index
-    @drinks = Drink.all
-
+    @drinks = @mood.drinks
     render json: @drinks
   end
 
@@ -42,6 +41,10 @@ class Api::V1::DrinksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_drink
       @drink = Drink.find(params[:id])
+    end
+
+    def set_mood
+      @mood = Mood.find(params[:mood_id])
     end
 
     # Only allow a trusted parameter "white list" through.
