@@ -15,7 +15,7 @@ class Api::V1::DessertsController < ApplicationController
 
   # POST /desserts
   def create
-    @dessert = Dessert.new(dessert_params)
+    @dessert = @mood.desserts.build(dessert_params)
 
     if @dessert.save
       render json: @dessert, status: :created, location: @dessert

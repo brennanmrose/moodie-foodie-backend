@@ -15,7 +15,7 @@ class Api::V1::FoodsController < ApplicationController
 
   # POST /foods
   def create
-    @food = Food.new(food_params)
+    @food = @mood.foods.build(food_params)
 
     if @food.save
       render json: @food, status: :created, location: @food
