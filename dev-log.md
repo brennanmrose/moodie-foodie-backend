@@ -19,9 +19,10 @@ has_many :dessert
 
 vegetarian
 vegan
-peanut free
-gluten free
-soy free
+peanut_free
+gluten_free
+soy_free
+user_id
 
 ### Relationships
 
@@ -34,6 +35,7 @@ has_many :dessert, through: :user
 ### Attributes
 
 name
+user_id
 
 ### Relationships
 
@@ -44,6 +46,7 @@ has_one :dietary_restriction, through: :user
 ### Attributes
 
 name
+user_id
 
 ### Relationships
 
@@ -54,6 +57,7 @@ has_one :dietary_restriction, through: :user
 ### Attributes
 
 name
+user_id
 
 ### Relationships
 
