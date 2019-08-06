@@ -1,4 +1,4 @@
-class DessertsController < ApplicationController
+class Api::V1::DessertsController < ApplicationController
   before_action :set_dessert, only: [:show, :update, :destroy]
 
   # GET /desserts
