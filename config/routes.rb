@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :desserts
   resources :drinks
   resources :foods
 	namespace :api do
