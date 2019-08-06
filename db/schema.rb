@@ -10,23 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_021702) do
+ActiveRecord::Schema.define(version: 2019_08_06_025303) do
 
   create_table "desserts", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "dietary_restrictions", force: :cascade do |t|
-    t.boolean "vegetarian"
-    t.boolean "vegan"
-    t.boolean "peanut_free"
-    t.boolean "gluten_free"
-    t.boolean "soy_free"
-    t.integer "user_id"
+    t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_021702) do
   create_table "drinks", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "user_id"
+    t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,15 +31,13 @@ ActiveRecord::Schema.define(version: 2019_08_06_021702) do
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "user_id"
+    t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.string "mood"
+  create_table "moods", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
