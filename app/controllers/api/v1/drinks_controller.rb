@@ -1,5 +1,6 @@
 class Api::V1::DrinksController < ApplicationController
   before_action :set_drink, :set_mood, only: [:show, :update, :destroy]
+  before_action :set_mood, only: [:show, :index, :update, :destroy]
 
   # GET /drinks
   def index

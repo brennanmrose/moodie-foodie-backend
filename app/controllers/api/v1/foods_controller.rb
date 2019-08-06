@@ -1,5 +1,6 @@
 class Api::V1::FoodsController < ApplicationController
   before_action :set_food, :set_mood, only: [:show, :update, :destroy]
+  before_action :set_mood, only: [:show, :index, :update, :destroy]
 
   # GET /foods
   def index
