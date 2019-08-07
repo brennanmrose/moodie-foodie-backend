@@ -1,3 +1,5 @@
 class FoodSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :description
+
+  belongs_to :mood
 end
