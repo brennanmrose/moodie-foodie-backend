@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_025303) do
     t.string "name"
     t.text "description"
     t.string "recipe_url"
+    t.string "image_url"
     t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_025303) do
     t.string "name"
     t.text "description"
     t.string "drink_url"
+    t.string "image_url"
     t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -34,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_025303) do
     t.string "name"
     t.text "description"
     t.string "recipe_url"
+    t.string "image_url"
     t.integer "mood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_08_06_025303) do
 
   create_table "moods", force: :cascade do |t|
     t.string "name"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
