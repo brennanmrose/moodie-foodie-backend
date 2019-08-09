@@ -15,7 +15,7 @@ Mood.create(name: 'Angry')
 Mood.create(name: 'Fearful')
 Mood.create(name: 'Tense')
 Mood.create(name: 'Lonely')
-Food.create(name: 'Hazelnut-Crusted Halibut with Roasted Asparagus', description: 'Fish is a great choice for quick dinners—most fillets cook to perfection in less than 10 minutes. You can use pecans, walnuts, or pine nuts in place of hazelnuts. To streamline prep and add a side, roast the asparagus together with Roasted Red Potatoes.', mood_id: 1)
+Food.create(name: 'Baked Halibut with Chimichurri', description: 'Though you might normally associate chimichurri with grilled steaks, lamb chops and other robust cuts of meat, this garlicky South American herb sauce pairs wonderfully with mild halibut and other lean white fish. Rubbed over the fillets before baking, the flavor of the chimichurri stays fresh and bright, infusing the delicate fish with a pop of green color and taste that says SPRING! It’s another simple yet impressive fish recipe to add to your repertoire.', recipe_url: 'https://www.thekitchn.com/recipe-baked-chimichurri-halibut-recipes-from-the-kitchn-188598', image_url: 'https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,c_fit,w_1460/https%3A%2F%2Fstorage.googleapis.com%2Fgen-atmedia%2F3%2F2013%2F04%2F776b41009266678a4ce808fa766dd2aa11224e9f.jpeg', mood_id: 1)
 Drink.create(name: 'Happy drink', description: 'happy drink desc', mood_id: 1)
 Dessert.create(name: 'Happy dessert', description: 'happy dessert desc', mood_id: 1)
 
