@@ -50,6 +50,6 @@ class Api::V1::FoodsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def food_params
-      params.require(:food).permit(:name, :description, :user_id)
+      params.require(:food).permit(:name, :description, :recipe_url, :image_url)
     end
 end
