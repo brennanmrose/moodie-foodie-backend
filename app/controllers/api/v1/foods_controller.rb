@@ -1,6 +1,6 @@
 class Api::V1::FoodsController < ApplicationController
   before_action :set_food, :set_mood, only: [:show, :update, :destroy]
-  before_action :set_mood, only: [:show, :index, :update, :destroy]
+  before_action :set_mood, only: [:show, :create, :index, :update, :destroy]
 
   # GET /foods
   def index
@@ -18,7 +18,7 @@ class Api::V1::FoodsController < ApplicationController
     @food = @mood.foods.build(food_params)
 
     if @food.save
-      render json: @food, status: :created, location: @food
+      render json: @food
     else
       render json: @food.errors, status: :unprocessable_entity
     end
