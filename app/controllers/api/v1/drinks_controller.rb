@@ -18,7 +18,7 @@ class Api::V1::DrinksController < ApplicationController
     @drink = @mood.drinks.build(drink_params)
 
     if @drink.save
-      render json: @drink, status: :created, location: @drink
+      render json: @drink
     else
       render json: @drink.errors, status: :unprocessable_entity
     end
@@ -50,6 +50,6 @@ class Api::V1::DrinksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def drink_params
-      params.require(:drink).permit(:name, :description, :user_id)
+      params.require(:drink).permit(:name, :description, :drink_url, :image_url)
     end
 end
