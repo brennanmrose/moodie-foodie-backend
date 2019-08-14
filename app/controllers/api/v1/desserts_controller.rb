@@ -1,6 +1,6 @@
 class Api::V1::DessertsController < ApplicationController
   before_action :set_dessert, only: [:show, :update, :destroy]
-  before_action :set_mood, only: [:show, :index, :update, :destroy]
+  before_action :set_mood, only: [:show, :create, :index, :update, :destroy]
 
   # GET /desserts
   def index
@@ -18,7 +18,7 @@ class Api::V1::DessertsController < ApplicationController
     @dessert = @mood.desserts.build(dessert_params)
 
     if @dessert.save
-      render json: @dessert, status: :created, location: @dessert
+      render json: @dessert
     else
       render json: @dessert.errors, status: :unprocessable_entity
     end
@@ -50,6 +50,6 @@ class Api::V1::DessertsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def dessert_params
-      params.require(:dessert).permit(:name, :description, :user_id)
+      params.require(:dessert).permit(:name, :description, :recipe_url, :image_url)
     end
 end
