@@ -1,6 +1,6 @@
 class Api::V1::DrinksController < ApplicationController
   before_action :set_drink, :set_mood, only: [:show, :update, :destroy]
-  before_action :set_mood, only: [:show, :index, :update, :destroy]
+  before_action :set_mood, only: [:show, :create, :index, :update, :destroy]
 
   # GET /drinks
   def index
@@ -16,7 +16,6 @@ class Api::V1::DrinksController < ApplicationController
   # POST /drinks
   def create
     @drink = @mood.drinks.build(drink_params)
-
     if @drink.save
       render json: @drink
     else
