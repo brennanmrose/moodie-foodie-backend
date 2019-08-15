@@ -18,7 +18,7 @@ class Api::V1::FoodsController < ApplicationController
     @food = @mood.foods.build(food_params)
 
     if @food.save
-      render json: @food
+      render json: @mood
     else
       render json: @food.errors, status: :unprocessable_entity
     end

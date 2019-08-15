@@ -46,6 +46,6 @@ class Api::V1::MoodsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def mood_params
-      params.require(:mood).permit(:name)
+      params.require(:mood).permit(:name, :image_url)
     end
 end
