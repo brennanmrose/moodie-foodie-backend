@@ -17,7 +17,7 @@ class Api::V1::DrinksController < ApplicationController
   def create
     @drink = @mood.drinks.build(drink_params)
     if @drink.save
-      render json: @drink
+      render json: @mood
     else
       render json: @drink.errors, status: :unprocessable_entity
     end

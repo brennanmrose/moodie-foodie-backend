@@ -18,7 +18,7 @@ class Api::V1::DessertsController < ApplicationController
     @dessert = @mood.desserts.build(dessert_params)
 
     if @dessert.save
-      render json: @dessert
+      render json: @mood
     else
       render json: @dessert.errors, status: :unprocessable_entity
     end
