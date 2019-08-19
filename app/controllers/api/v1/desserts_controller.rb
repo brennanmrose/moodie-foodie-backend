@@ -35,7 +35,14 @@ class Api::V1::DessertsController < ApplicationController
 
   # DELETE /desserts/1
   def destroy
-    @dessert.destroy
+    if @dessert.destroy
+      render json:  { data: "Dessert successfully destroyed" }, status: :ok
+    else
+      error_resp = {
+        error: "Dessert not found and not destroyed"
+      }
+      render json: error_resp, status: :unprocessable_entity
+    end
   end
 
   private
