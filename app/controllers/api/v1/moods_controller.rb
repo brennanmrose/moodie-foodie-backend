@@ -35,7 +35,14 @@ class Api::V1::MoodsController < ApplicationController
 
   # DELETE /moods/1
   def destroy
-    @mood.destroy
+    if @mood.destroy
+      render json:  { data: "Mood successfully destroyed" }, status: :ok
+    else
+      error_resp = {
+        error: "Mood not found and not destroyed"
+      }
+      render json: error_resp, status: :unprocessable_entity
+    end
   end
 
   private
