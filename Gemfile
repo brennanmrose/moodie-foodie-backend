@@ -29,7 +29,7 @@ gem 'activerecord', '~> 6.1.4.1'
 gem 'activestorage', '~> 6.1.4.1'
 gem 'activesupport', '~> 6.1.4.1'
 gem 'loofah', '~> 2.3.1'
-gem 'nokogiri', '~> 1.11.4'
+gem 'nokogiri', '~> 1.13.9'
 
 gem 'bundler', '~> 2.2.22'
 gem 'railties', '~> 6.1.4.1'
